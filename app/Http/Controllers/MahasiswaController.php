@@ -69,7 +69,7 @@ class MahasiswaController extends Controller
 
     }
 
-  
+
     public function update(Request $request, Mahasiswa $mahasiswa)
     {
         //melakukan validasi data
@@ -92,7 +92,7 @@ class MahasiswaController extends Controller
         Mahasiswa::find($Nim)->delete();
         return redirect()->route('mahasiswa.index')
         -> with('success', 'Mahasiswa Berhasil Dihapus');
-
+        return redirect()->route('mahasiswa.index')->with('success', 'Mahasiswa Berhasil Dihapus');
     }
 
 
